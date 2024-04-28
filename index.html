@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banana Inc.</title>
+<style>
+    body {
+        background-color: #FFFAF0; /* Lighter background to ensure good contrast */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333; /* Dark text for better readability */
+    }
+    header {
+        background-color: #444; /* Slightly lighter header background for better contrast */
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0 20px;
+    }
+    nav a:hover {
+        text-decoration: underline; /* Improves usability by indicating clickable links */
+    }
+    footer {
+        background-color: #444; /* Consistency with header */
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    main {
+        padding: 20px; /* Padding to prevent content from sticking to the edges */
+        margin-bottom: 50px; /* Space for the fixed footer */
+    }
+    form {
+        max-width: 600px; /* Limit form width for better readability */
+        margin: auto;
+    }
+    label {
+        display: block; /* Style labels for better form structure */
+        margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%; /* Full width inputs for better mobile usability */
+        padding: 8px;
+        box-sizing: border-box; /* Includes padding in width calculation */
+    }
+    input[type="submit"] {
+        background-color: #4CAF50; /* Green button for positive action */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px; /* Rounded corners for aesthetics */
+        cursor: pointer; /* Indicates clickable button */
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049; /* Darker green on hover for feedback */
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Banana Inc.</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Our Products</h2>
+        <p>Product 1: Description of product 1. Ensuring product descriptions are concise and informative.</p>
+        <p>Product 2: Description of product 2. Each description should clearly communicate the value and appeal of the product.</p>
+        <p>Product 3: Description of product 3. Good product descriptions can help in making the website more engaging.</p>
+    </section>
+    <section>
+        <h2>Contact Us</h2>
+        <form onsubmit="return submitForm();">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</main>
+<footer>
+    &copy; 2023 Banana Inc. All Rights Reserved.
+</footer>
+<script>
+function submitForm() {
+    alert('Thank you for your submission, ' + document.getElementById('name').value + '!');
+    return false; // Prevent default form submission
+}
+</script>
+</body>
+</html>
